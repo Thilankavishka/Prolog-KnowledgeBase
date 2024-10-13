@@ -1,0 +1,26 @@
+parent(tom,bob).
+parent(pam,bob).
+parent(tom,liz).
+parent(bob,ann).
+parent(bob,pat).
+parent(pat,jim).
+
+female(pam).
+female(liz).
+female(pat).
+female(ann).
+
+male(tom).
+male(bob).
+male(jim).
+
+
+%7
+mother(X,Y) :- parent(X,Y),female(X).
+
+%8
+father(X,Y) :- parent(X,Y),male(X).
+
+%9
+sister(X,Y) :- parent(M,X),parent(M,Y),female(X),not(X==Y).
+
