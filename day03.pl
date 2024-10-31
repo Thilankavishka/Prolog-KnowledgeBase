@@ -28,7 +28,7 @@ output(First,Last) :- First=\=Last,write(First),nl,N is First+1,output(N,Last).
 
 %6 sum the integers from 1 to N
 sum(1,1).
-sum(N,S) :- N>1,N1 is N-1,sum(N1,S1),S = S1+N,write(S),nl.
+sum(N,S) :- N>1,N1 is N-1,sum(N1,S1),S is S1+N,write(S),nl.
 
 %7)output first N squares, one per line
 writesquares(1):-write(1),nl.
